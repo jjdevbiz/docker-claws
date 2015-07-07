@@ -8,7 +8,8 @@ RUN	apt-get update
 RUN	apt-get upgrade -y
 
 # install ssh and iceweasel
-RUN	apt-get install -y openssh-server claws-mail
+RUN	apt-get install -y openssh-server
+RUN	apt-get install -y claws-mail claws-mail-archiver-plugin claws-mail-address-keeper claws-mail-clamd-plugin claws-mail-extra-plugins claws-mail-fancy-plugin claws-mail-pdf-viewer claws-mail-pgpinline claws-mail-pgpmime claws-mail-plugins claws-mail-spamassassin claws-mail-themes
 
 # Create user "docker" and set the password to "docker"
 RUN useradd -m -d /home/docker docker
